@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Kitnets — seu Antônio</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+<style>*{box-sizing:border-box;margin:0;padding:0}body{background:#0d0d1a;color:#f0f0f0;font-family:sans-serif}input,select{outline:none}button{font-family:sans-serif}</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" data-presets="react">
+const {useState}=React;
+const TESTE=()=><div style={{color:"white",padding:40,fontSize:24}}>✅ Funcionou!</div>;
+ReactDOM.createRoot(document.getElementById("root")).render(<TESTE/>);
+</script>
+</body>
+</html>
