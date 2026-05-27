@@ -126,7 +126,7 @@ function Financeiro({lancs,setLancs,units}){
       })
     ),
     !showForm&&!editId&&h("button",{onClick:function(){setShowForm(true);},style:{width:"100%",padding:"11px",borderRadius:12,border:"1px dashed rgba(245,158,11,0.5)",background:"rgba(245,158,11,0.05)",color:"#f59e0b",fontWeight:700,fontSize:14,cursor:"pointer",marginBottom:14}},"+ Novo Lançamento"),
-    showForm&&h(LancForm,{units,onSave:function(fm){setLancs(function(p){return [{id:Date.now()},fm].reduce(Object.assign,[{}]);return [{id:Date.now(),...fm},...p];},setLancs(function(p){return [{id:Date.now(),...fm},...p];}));setShowForm(false);},onCancel:function(){setShowForm(false);}}),
+    showForm&&h(LancForm,{units,onSave:function(fm){setLancs(function(p){return [{id:Date.now(),...fm},...p];});setShowForm(false);},onCancel:function(){setShowForm(false);}}),
     fil.length===0?h("div",{style:{textAlign:"center",color:"#666",padding:"40px 20px"}},h("div",{style:{fontSize:32,marginBottom:10}},"📋"),h("div",{style:{fontSize:14,color:"#888"}},"Nenhum lançamento em "+MESES_FULL[mes])):
     fil.map(function(l){
       const un=l.unidade==="geral"?"Geral":(units.find(function(u){return u.id===l.unidade;})||{}).nome||"";
